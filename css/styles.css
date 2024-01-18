@@ -8,7 +8,7 @@
     --third-color: #3b667d;
     --trans-speed: 0.5s;
     --trans-ease: ease;
-    --bg-img: url('../img/piscine_cruiser.jpg');
+    --bg-img: url('../img/Excavation_Piscine_cruiser.jpg');
 }
 
 /* Reset and Global Styles */
@@ -409,6 +409,42 @@ p {
     color: #fff;
 }
 
+/* Partner List */
+.partner-list {
+    flex: 0 0 100%; /* Ensure each partner list takes the full width initially */
+    margin-bottom: 20px; /* Add space between partner lists */
+    padding-top: 20px; /* Add padding above the partner lists */
+}
+
+/* Add this CSS for fixed image width and height */
+.partner-list-image {
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    height: 120px; /* Set a fixed height for the partner list container */
+}
+
+.partner-list-image img {
+    max-width: 100%; /* Set a maximum width for the images */
+    max-height: 100%; /* Set a maximum height for the images */
+    object-fit: contain; /* Maintain aspect ratio and fit within the container */
+    border-radius: 10px; /* Add border-radius for a rounded appearance */
+}
+
+/* Adjust the column width on medium-sized screens and larger */
+@media screen and (min-width: 768px) {
+    .partner-list {
+        flex: 0 0 48%; /* Make each partner list take up less than half of the container */
+        margin-right: 4%; /* Add some space between partner lists */
+    }
+
+    .partner-list:last-child {
+        margin-right: 0; /* Remove margin for the last partner list */
+    }
+}
+
+
+
 /* Options Section Styles */
 .options-section {
     width: 100%;
@@ -477,7 +513,7 @@ p {
     }
 }
 
-/* Conatact-Section Styles */
+/* Contact-Section Styles */
 .Contact-section {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), var(--bg-img) no-repeat center/cover;
     color: var(--light-color);
