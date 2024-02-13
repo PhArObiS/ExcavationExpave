@@ -96,6 +96,31 @@ function hideSidebar() {
   sidebar.style.display = 'none'
 }
 
+// Add the following JavaScript code to your existing script.js or create a new one
+
+document.addEventListener("DOMContentLoaded", function () {
+  const nav = document.getElementById("nav");
+  let prevScrollpos = window.pageYOffset;
+
+  window.onscroll = function () {
+    const currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+      nav.style.opacity = "1";
+    } else {
+      nav.style.opacity = "0.8"; // Adjust the desired opacity when scrolling down
+    }
+    prevScrollpos = currentScrollPos;
+
+    // Add or remove 'scrolled' class based on scroll position
+    if (currentScrollPos > 50) {
+      nav.classList.add("scrolled");
+    } else {
+      nav.classList.remove("scrolled");
+    }
+  };
+});
+
+
 // MiniScreenNavButton
 // const toggleBtn = document.querySelector(".toggle-btn");
 // const navmenu = document.querySelector(".nav-menu");
