@@ -24,14 +24,14 @@ $(".nav-menu a").on("click", function (event) {
   }
 });
 
-// Navbar Opacity on Scroll
+// Nav Opacity on Scroll
 let prevScrollpos = window.pageYOffset;
-const navbar = document.getElementById("navbar");
-navbar.style.transition = "opacity 0.3s";
+const nav = document.getElementById("nav");
+nav.style.transition = "opacity 0.3s";
 
 window.onscroll = function () {
   const currentScrollPos = window.pageYOffset;
-  navbar.style.opacity = prevScrollpos > currentScrollPos ? "1" : "0.5";
+  nav.style.opacity = prevScrollpos > currentScrollPos ? "1" : "0.5";
   prevScrollpos = currentScrollPos;
 };
 
@@ -86,13 +86,23 @@ $("#image-slider").on(
   }
 );
 
-// MiniScreenNavButton
-const toggleBtn = document.querySelector(".toggle-btn");
-const navmenu = document.querySelector(".nav-menu");
 
-toggleBtn.addEventListener("click", () => {
-  navmenu.classList.toggle("active");
-});
+function showSidebar() {
+  document.querySelector('.sidebar').style.display = 'flex';
+}
+
+function hideSidebar() {
+  const sidebar = document.querySelector('.sidebar')
+  sidebar.style.display = 'none'
+}
+
+// MiniScreenNavButton
+// const toggleBtn = document.querySelector(".toggle-btn");
+// const navmenu = document.querySelector(".nav-menu");
+
+// toggleBtn.addEventListener("click", () => {
+//   navmenu.classList.toggle("active");
+// });
 
 document.addEventListener("DOMContentLoaded", function () {
   // Your slide code here
