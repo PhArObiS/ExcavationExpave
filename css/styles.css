@@ -54,45 +54,30 @@ nav {
     position: fixed;
     width: 100%;
     z-index: 1000;
-    opacity: 1; /* Initial opacity */
+    opacity: 1; 
     transition: opacity 0.5s;
     
 }
 
 nav ul {
     display: flex;
-    /* text-transform: uppercase; */
     list-style: none;
     align-items: center;
     justify-content: flex-end;
     width:100%;
     height: 60px;
     padding-top: 1rem;
-    
-
-    /* display: flex;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1;
-    padding: 1rem;
-    color: var(--light-color);
-    justify-content: space-between; */
+    text-transform: uppercase;
 }
 
-/* nav li {
-    height: 50px;
-    
-} */
-
 nav ul li img {
-    width: 200px; /* Adjust the width as needed */
-    height: auto; /* Maintain aspect ratio */
-    margin-right: 10px; /* Add some spacing */
-    border-radius: 5px; /* Add rounded corners if desired */
+    width: 200px; 
+    height: auto; 
+    margin-right: 10px; 
+    border-radius: 5px; 
     text-decoration: none;
     padding-top: 20px;
-    filter: brightness(200%); /* Adjust the percentage to make it brighter */
+    filter: brightness(200%); 
 }
 
 nav ul li.logo img {
@@ -113,7 +98,7 @@ nav a {
     display: flex;
     align-items: center;
     color: var(--light-color);
-    font-size: 19px;
+    font-size: 17px;
 }
 
 
@@ -146,7 +131,6 @@ nav li:first-child{
     flex-direction: column;
     align-items:flex-start;
     justify-content: flex-start;
-
     background-color: rgba(64, 63, 63, 0.2);
     backdrop-filter: blur(10px);
 }
@@ -186,6 +170,7 @@ nav li:first-child{
         
     }
 }
+
 /* Image Slider Styles */
 #image-slider {
     width: 100%;
@@ -198,12 +183,12 @@ nav li:first-child{
 }
 
 .slick-slide {
-    height: 50vh; /* Set the height to 40% of the viewport height */
+    height: 50vh; 
 }
 
 .slick-slide img {
-    width: 100vw; /* Make the images take the full width of the viewport */
-    height: 100%; /* Ensure the images cover the entire slide height */
+    width: 100vw; 
+    height: 100%; 
     object-fit: cover;
     border-radius: 10px;
 }
@@ -279,7 +264,7 @@ nav li:first-child{
 /* Responsive Styles */
 @media screen and (max-width: 768px) {
     .slick-slide {
-        height: 40vh; /* Adjust height for smaller screens */
+        height: 40vh; 
     }
 
     .carousel-content {
@@ -296,11 +281,6 @@ nav li:first-child{
     height: 600px;
     background: #f5f5f5;
     box-shadow: 0 30px 50px #dbdbdb;
-
-    /* width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 50px; */
 }
 
 .containerPic .slide .itemPic {
@@ -420,42 +400,40 @@ nav li:first-child{
     background: #ababab;;
     color: #fff;
 }
-
-/* Partner List */
+/* 
+/* Partner List 
 .partner-list {
-    flex: 0 0 100%; /* Ensure each partner list takes the full width initially */
-    margin-bottom: 20px; /* Add space between partner lists */
-    padding-top: 20px; /* Add padding above the partner lists */
+    flex: 0 0 100%; 
+    margin-bottom: 20px;
+    padding-top: 20px; 
 }
 
-/* Add this CSS for fixed image width and height */
+/* Add this CSS for fixed image width and height 
 .partner-list-image {
     display: flex;
-    justify-content: center; /* Center the content horizontally */
-    align-items: center; /* Center the content vertically */
-    height: 120px; /* Set a fixed height for the partner list container */
+    justify-content: center; 
+    align-items: center; 
+    height: 120px; 
 }
 
 .partner-list-image img {
-    max-width: 100%; /* Set a maximum width for the images */
-    max-height: 100%; /* Set a maximum height for the images */
-    object-fit: contain; /* Maintain aspect ratio and fit within the container */
-    border-radius: 10px; /* Add border-radius for a rounded appearance */
-}
+    max-width: 100%; 
+    max-height: 100%; 
+    object-fit: contain; 
+    border-radius: 10px; 
+} */
 
 /* Adjust the column width on medium-sized screens and larger */
-@media screen and (min-width: 768px) {
+/* @media screen and (min-width: 768px) {
     .partner-list {
-        flex: 0 0 48%; /* Make each partner list take up less than half of the container */
-        margin-right: 4%; /* Add some space between partner lists */
+        flex: 0 0 48%;
+        margin-right: 4%; 
     }
 
     .partner-list:last-child {
-        margin-right: 0; /* Remove margin for the last partner list */
+        margin-right: 0;
     }
-}
-
-
+} */
 
 /* Options Section Styles */
 .options-section {
@@ -467,61 +445,86 @@ nav li:first-child{
 }
 
 .options-section .section-content {
-    padding: 0px 50px;
+    padding: 0 20px; 
     margin: 40px auto;
+    max-width: 1200px;
 }
 
 .options-section .container .section-content .row .card {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
-    height: 100%; /* Set a fixed height for the card container */
+    height: 100%;
+    transition: transform 0.3s ease; 
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.options-section .container .section-content .row .card:hover {
+    transform: scale(1.05); 
 }
 
 .options-section .container .section-content .row .card .img-container {
-    height: 200px; /* Set a fixed height for the image container */
+    flex: 1;
     overflow: hidden;
     border-radius: 10px;
+    position: relative;
+    padding-top: 20px;
 }
 
 .options-section .container .section-content .row .card img {
     width: 100%;
-    height: auto;
+    height: 330px;
     object-fit: cover;
+    border-radius: 10px;
+    display: block;
 }
 
 .options-section .container .section-content .row .card h4 {
-    font-size: 24px;
+    font-size: 1.5rem; 
     font-weight: bold;
-    color: var(--dark-color);
+    color: var(--third-color);
+    margin: 1rem 0;
+    text-align: center;
+    
 }
 
 .options-section .container .section-content .row .card p {
     color: var(--second-color);
+    margin-bottom: 1rem; 
+    text-align: center;
 }
 
 .options-section .section-content .title h2 {
     font-size: 3rem;
     color: var(--third-color);
     text-transform: uppercase;
+    margin-bottom: 1rem; 
+    text-align: center;
 }
 
 .options-section .section-content .title p {
-    font-size: 19px;
+    font-size: 1rem; 
     color: var(--second-color);
-    margin-top: 20px;
+    margin-top: 1rem; 
+    text-align: center;
 }
 
 /* Responsive Styles */
 @media screen and (max-width: 768px) {
-    .contact-form,
-    .map-container,
-    .options-section .card {
-        width: 100%;
+    .options-section .container .section-content .row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
-    .options-section .card {
-        margin-bottom: 20px; /* Add margin or adjust the value as needed */
+    .options-section .container .section-content .row .card {
+        width: calc(50% - 20px); 
+        margin: 0 10px 20px;
+    }
+    
+    .options-section .container .section-content .row .card {
+        margin-bottom: 20px;
     }
 }
 
@@ -632,15 +635,15 @@ nav li:first-child{
 /* Contact - Map - Footer Styles */
 #contact {
     background-color: #f2f2f2;
-    display: flex; /* Add flex display to the contact section */
-    justify-content: space-between; /* Distribute the space between child elements */
-    align-items: stretch; /* Ensure child elements stretch to full height */
+    display: flex; 
+    justify-content: space-between; 
+    align-items: stretch; 
 }
 
 .contact-form,
 .map-container {
-    flex: 0 0 48%; /* Adjust the width of the contact form and map container */
-    box-sizing: border-box; /* Include padding in the width */
+    flex: 0 0 48%; 
+    box-sizing: border-box; 
 }
 
 .contact-form {
@@ -648,7 +651,7 @@ nav li:first-child{
     padding: 20px;
     display: flex;
     flex-direction: column;
-    height: 100%; /* Set height to 100% to fill the container */
+    height: 100%; 
 }
 
 .map-container {
@@ -730,9 +733,9 @@ nav li:first-child{
     .map-container {
         position: relative;
         overflow: hidden;
-        padding-bottom: 60%; /* Adjust this value for your preferred aspect ratio */
+        padding-bottom: 60%; 
         height: 0;
-        margin-top: 20px; /* Add margin or adjust the value as needed */
+        margin-top: 20px; 
     }
 
     .map-container iframe {
@@ -750,21 +753,21 @@ nav li:first-child{
     color: var(--light-color);
     padding: 2rem;
     display: flex;
-    flex-direction: column; /* Changed to column */
+    flex-direction: column; 
     justify-content: space-between;
     align-items: center;
-    border-top: 2px solid var(--main-color); /* Increased border thickness for a better visual effect */
+    border-top: 2px solid var(--main-color); 
 }
 
 .footer .socials {
-    margin-top: 1.5rem; /* Adjusted margin for better spacing */
-    list-style: none; /* Remove default list styles */
-    padding: 0; /* Remove default padding for better alignment */
+    margin-top: 1.5rem; 
+    list-style: none;
+    padding: 0; 
     display: flex;
 }
 
 .footer .socials li {
-    margin-right: 10px; /* Adjusted margin between social icons */
+    margin-right: 10px; 
 }
 
 .footer .socials a {
@@ -780,25 +783,25 @@ nav li:first-child{
 .footer p {
     margin: 0;
     text-align: center;
-    font-size: 14px; /* Adjusted font size for better readability */
-    color: var(--second-color); /* Use secondary color for the text */
+    font-size: 14px; 
+    color: var(--second-color); 
 }
 
 /* Responsive Styles */
 @media screen and (max-width: 768px) {
     .footer {
-        padding: 2rem 1rem; /* Adjusted padding for better spacing on smaller screens */
+        padding: 2rem 1rem; 
     }
 
     .footer .socials {
-        margin-top: 1.5rem; /* Adjusted margin for better spacing */
+        margin-top: 1.5rem; 
     }
 
     .footer .socials li {
-        margin-right: 8px; /* Adjusted margin for smaller screens */
+        margin-right: 8px; 
     }
 
     .footer p {
-        font-size: 13px; /* Adjusted font size for better readability on smaller screens */
+        font-size: 13px; 
     }
 }
