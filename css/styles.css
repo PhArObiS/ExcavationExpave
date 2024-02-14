@@ -512,17 +512,17 @@ nav li:first-child{
 
 /* Responsive Styles */
 @media screen and (max-width: 800px) {
-    .options-section .container .section-content .row {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+    .options-section .container .section-content .row .card:hover {
+        transform: scale(1.05);
     }
 
     .options-section .container .section-content .row .card {
-        width: calc(100% - 20px); /* Set to 100% for a single column */
+        width: calc(100% - 20px);
         margin: 0 10px 20px;
+        transition: transform 0.3s ease; /* Add a smooth transition effect */
     }
 }
+
 
 
 /* Contact-Section Styles */
