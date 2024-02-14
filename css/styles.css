@@ -474,7 +474,7 @@ nav li:first-child{
 
 .options-section .container .section-content .row .card img {
     width: 100%;
-    height: 330px;
+    height: 300px;
     object-fit: cover;
     border-radius: 10px;
     display: block;
@@ -511,7 +511,7 @@ nav li:first-child{
 }
 
 /* Responsive Styles */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
     .options-section .container .section-content .row {
         display: flex;
         flex-wrap: wrap;
@@ -519,14 +519,11 @@ nav li:first-child{
     }
 
     .options-section .container .section-content .row .card {
-        width: calc(50% - 20px); 
+        width: calc(100% - 20px); /* Set to 100% for a single column */
         margin: 0 10px 20px;
     }
-    
-    .options-section .container .section-content .row .card {
-        margin-bottom: 20px;
-    }
 }
+
 
 /* Contact-Section Styles */
 .Contact-section {
