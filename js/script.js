@@ -35,46 +35,35 @@ window.onscroll = function () {
   prevScrollpos = currentScrollPos;
 };
 
-document.addEventListener("DOMContentLoaded", function () {
-  const contactForm = document.getElementById("contact-form");
-
-  contactForm.addEventListener("submit", function (event) {
+$(document).ready(function () {
+  $("#contact-form").submit(function (event) {
+    // Prevent the form from submitting the traditional way
     event.preventDefault();
 
     // Gather form data
     const formData = {
-      name: document.getElementById("name").value,
-      email: document.getElementById("email").value,
-      phone: document.getElementById("phone").value,
-      message: document.getElementById("message").value,
+      name: $("#name").val(),
+      email: $("#email").val(),
+      phone: $("#phone").val(),
+      message: $("#message").val(),
     };
 
-    // Send the form data to the specified endpoint using Fetch API
-    fetch("https://formspree.io/f/xzbnryoe", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    })
-      .then(response => {
-        if (response.ok) {
-          // Display a success message to the user
-          alert("Votre message a été envoyé avec succès!");
-
-          // Reset the form after successful submission
-          contactForm.reset();
-        } else {
-          // Display an error message to the user
-          alert("Échec de l'envoi du message. Veuillez réessayer plus tard.");
-        }
+    // Send the form data to the specified endpoint
+    $.post("https://formspree.io/f/xzbnryoe", formData)
+      .done(function () {
+        // Display a success message to the user
+        alert("Votre message a été envoyé avec succès!");
+        
+        // Optionally, reset the form after successful submission
+        $("#contact-form")[0].reset();
       })
-      .catch(error => {
-        console.error("Error:", error);
+      .fail(function () {
+        // Display an error message to the user
         alert("Échec de l'envoi du message. Veuillez réessayer plus tard.");
       });
   });
 });
+
 
 
 
