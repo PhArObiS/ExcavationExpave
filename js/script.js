@@ -37,30 +37,30 @@ window.onscroll = function () {
 
 $(document).ready(function () {
   $("#contact-form").submit(function (event) {
-    // Prevent the form from submitting the traditional way
-    event.preventDefault();
+      // Prevent the form from submitting the traditional way
+      event.preventDefault();
 
-    // Gather form data
-    const formData = {
-      name: $("#name").val(),
-      email: $("#email").val(),
-      phone: $("#phone").val(),
-      message: $("#message").val(),
-    };
+      // Gather form data
+      const formData = {
+          name: $("#name").val(),
+          email: $("#email").val(),
+          phone: $("#phone").val(),
+          message: $("#message").val(),
+      };
 
-    // Send the form data to the specified endpoint
-    $.post("https://formspree.io/f/xzbnryoe", formData)
-      .done(function () {
-        // Display a success message to the user
-        alert("Votre message a été envoyé avec succès!");
-        
-        // Optionally, reset the form after successful submission
-        $("#contact-form")[0].reset();
-      })
-      .fail(function () {
-        // Display an error message to the user
-        alert("Échec de l'envoi du message. Veuillez réessayer plus tard.");
-      });
+      // Send the form data to the specified endpoint
+      $.post("https://formspree.io/f/xzbnryoe", formData)
+          .done(function () {
+              // Display a success message to the user
+              alert("Votre message a été envoyé avec succès!");
+
+              // Optionally, reset the form after successful submission
+              $("#contact-form")[0].reset();
+          })
+          .fail(function () {
+              // Display an error message to the user
+              alert("Échec de l'envoi du message. Veuillez réessayer plus tard.");
+          });
   });
 });
 
