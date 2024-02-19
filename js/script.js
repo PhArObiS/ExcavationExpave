@@ -39,7 +39,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const contactForm = document.getElementById("contact-form");
 
   contactForm.addEventListener("submit", function (event) {
-    // Prevent the form from submitting the traditional way
     event.preventDefault();
 
     // Gather form data
@@ -63,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
           // Display a success message to the user
           alert("Votre message a été envoyé avec succès!");
 
-          // Optionally, reset the form after successful submission
+          // Reset the form after successful submission
           contactForm.reset();
         } else {
           // Display an error message to the user
@@ -119,8 +118,6 @@ function hideSidebar() {
   sidebar.style.display = 'none'
 }
 
-// Add the following JavaScript code to your existing script.js or create a new one
-
 document.addEventListener("DOMContentLoaded", function () {
   const nav = document.getElementById("nav");
   let prevScrollpos = window.pageYOffset;
@@ -130,7 +127,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (prevScrollpos > currentScrollPos) {
       nav.style.opacity = "1";
     } else {
-      nav.style.opacity = "0.8"; // Adjust the desired opacity when scrolling down
+      nav.style.opacity = "0.8"; 
     }
     prevScrollpos = currentScrollPos;
 
@@ -142,15 +139,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   };
 });
-
-
-// MiniScreenNavButton
-// const toggleBtn = document.querySelector(".toggle-btn");
-// const navmenu = document.querySelector(".nav-menu");
-
-// toggleBtn.addEventListener("click", () => {
-//   navmenu.classList.toggle("active");
-// });
 
 document.addEventListener("DOMContentLoaded", function () {
   // Your slide code here
