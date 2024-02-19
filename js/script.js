@@ -35,26 +35,35 @@ window.onscroll = function () {
   prevScrollpos = currentScrollPos;
 };
 
-// Contact Form Submission
 $(document).ready(function () {
   $("#contact-form").submit(function (event) {
+    // Prevent the form from submitting the traditional way
     event.preventDefault();
+
+    // Gather form data
     const formData = {
       name: $("#name").val(),
       email: $("#email").val(),
-      telephone: $("#phone").val(),
+      phone: $("#phone").val(),
       message: $("#message").val(),
     };
-    // Adjust the API endpoint based on your needs
-    $.post("https://example.com/api/send-lead", formData)
-      .done(() => {
-        alert("Email Sent");
+
+    // Send the form data to the specified endpoint
+    $.post("https://formspree.io/f/xzbnryoe", formData)
+      .done(function () {
+        // Display a success message to the user
+        alert("Votre message a été envoyé avec succès!");
+        
         // Optionally, reset the form after successful submission
         $("#contact-form")[0].reset();
       })
-      .fail(() => alert("Failed to send email"));
+      .fail(function () {
+        // Display an error message to the user
+        alert("Échec de l'envoi du message. Veuillez réessayer plus tard.");
+      });
   });
 });
+
 
 // Slick Carousel Initialization with Autoplay
 $("#image-slider").slick({
