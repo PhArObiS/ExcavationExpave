@@ -145,3 +145,4 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelector(".slide").prepend(items[items.length - 1]);
   });
 });
+
