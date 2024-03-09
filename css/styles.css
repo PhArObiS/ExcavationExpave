@@ -8,7 +8,7 @@
     --third-color: #3b667d;
     --trans-speed: 0.5s;
     --trans-ease: ease;
-    --bg-img: url('../img/Excavation_Piscine_cruiser.jpg');
+    --bg-img: url('../img/MiniExcavation_PiscineCruiser.jpg');
 }
 
 /* Reset and Global Styles */
@@ -751,21 +751,23 @@ nav li:first-child{
     color: var(--light-color);
     padding: 2rem;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    border-top: 2px solid var(--main-color); 
+    border-top: 2px solid var(--main-color);
 }
 
 .footer .socials {
-    margin-top: 1.5rem; 
-    list-style: none;
-    padding: 0; 
+    margin-top: 1.5rem;
+    padding: 0;
     display: flex;
+    justify-content: center; /* Center the social media icons */
 }
 
 .footer .socials li {
-    margin-right: 10px; 
+    margin-right: 8px;
+    list-style: none;
+    
 }
 
 .footer .socials a {
@@ -778,28 +780,93 @@ nav li:first-child{
     color: var(--main-color);
 }
 
+
 .footer p {
     margin: 0;
     text-align: center;
-    font-size: 14px; 
-    color: var(--second-color); 
+    font-size: 14px;
+    color: var(--second-color);
+}
+
+/* New styles for Zone de Service, Specialities, Info Général, and footer-bottom */
+.footer .zone-de-service,
+.footer .specialities,
+.footer .info-general,
+.footer .footer-bottom {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.footer .zone-de-service h4,
+.footer .specialities h4,
+.footer .info-general h4,
+.footer .footer-bottom p {
+    color: var(--main-color);
+    margin-bottom: 0.5rem;
+}
+
+.footer .zone-de-service ul,
+.footer .specialities ul,
+.footer .info-general ul,
+.footer .footer-bottom ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer .zone-de-service li,
+.footer .specialities li,
+.footer .info-general li,
+.footer .footer-bottom li {
+    font-size: 14px;
+    color: var(--second-color);
 }
 
 /* Responsive Styles */
 @media screen and (max-width: 768px) {
     .footer {
-        padding: 2rem 1rem; 
+        padding: 2rem 1rem;
     }
 
     .footer .socials {
-        margin-top: 1.5rem; 
+        margin-top: 1.5rem;
     }
 
     .footer .socials li {
-        margin-right: 8px; 
+        margin-right: 8px;
     }
 
     .footer p {
-        font-size: 13px; 
+        font-size: 13px;
+    }
+
+    /* Responsive Styles for Zone de Service, Specialities, Info Général, and footer-bottom */
+    .footer .zone-de-service,
+    .footer .specialities,
+    .footer .info-general,
+    .footer .footer-bottom {
+        margin-top: 1.5rem;
+    }
+
+    .footer .zone-de-service h4,
+    .footer .specialities h4,
+    .footer .info-general h4,
+    .footer .footer-bottom p {
+        font-size: 16px; /* Adjust the font size for better readability on smaller screens */
+        margin-bottom: 0.5rem;
+    }
+
+    .footer .zone-de-service ul,
+    .footer .specialities ul,
+    .footer .info-general ul,
+    .footer .footer-bottom ul {
+        padding: 0;
+    }
+
+    .footer .zone-de-service li,
+    .footer .specialities li,
+    .footer .info-general li,
+    .footer .footer-bottom li {
+        font-size: 14px;
     }
 }
+

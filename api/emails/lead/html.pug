@@ -1,0 +1,26 @@
+extends ../layout/default.pug
+
+block message        
+    table.row
+        tbody
+            tr
+                td.columns.first
+                    span Name
+                td.columns
+                    span #{data.name}
+            tr
+                td.columns.first
+                    span Email
+                td.columns
+                    span  #{data.email}
+            tr
+                td.columns.first
+                    span Telephone
+                td.columns
+                    span #{data.telephone}
+            tr
+                td.columns.first
+                    span Message
+                td.columns
+                    span #{data.message}
+            
