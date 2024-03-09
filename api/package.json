@@ -1,0 +1,24 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon --watch './**/*.mjs' --exec 'node -r dotenv/config' ./index.mjs",
+    "start": "node -r dotenv/config index.mjs",
+    "pm2-start": "pm2 start yarn --interpreter bash --name api -- start",
+    "pm2-stop": "pm2 stop api"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "email-templates": "^11.0.3",
+    "express": "^4.18.2",
+    "nodemailer": "^6.9.1",
+    "pug": "^3.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
