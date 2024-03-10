@@ -512,7 +512,7 @@ nav li:first-child{
 }
 
 /* Responsive Styles */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 768px) {
     .options-section .container .section-content .row .card:hover {
         transform: scale(1.05);
     }
@@ -556,78 +556,32 @@ nav li:first-child{
 
 /* About Us Section Styles */
 .about-us-section {
-    width: 60%;
-    margin: 20px auto;
-    padding: 1rem;
+    padding: 2rem;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.about-us-section .row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: var(--spacing-lg);
-}
-
-/* Image Section Styles */
-.about-us-section .image-section {
-    flex: 0 0 45%;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.about-us-section .image-section img {
+.about-us-section img {
     width: 100%;
     height: auto;
     object-fit: cover;
     transition: transform 0.5s ease;
 }
 
-.about-us-section .image-section:hover img {
+.about-us-section img:hover {
     transform: scale(1.1);
 }
 
-/* Article Section Styles */
 .about-us-section article {
-    flex: 0 0 50%;
-    padding: 0 20px;
-}
-
-.about-us-section article h2,
-.about-us-section article h3,
-.about-us-section article p {
-    margin-bottom: 15px;
-}
-
-.about-us-section article .blog-cards {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: var(--spacing-lg);
+    padding: 0 10px;
 }
 
 /* Responsive Styles */
 @media screen and (max-width: 768px) {
     .about-us-section {
-        width: 80%;
+        padding: 1rem;
     }
-
-    .about-us-section .row {
-        flex-direction: column;
-    }
-
-    .about-us-section .image-section,
-    .about-us-section article {
-        flex: 0 0 100%;
-    }
-}
-
-.map iframe {
-    width: 100%;
-    height: 100%;
 }
 
 /* Contact - Map - Footer Styles */
@@ -756,6 +710,32 @@ nav li:first-child{
     align-items: center;
     border-top: 2px solid var(--main-color);
 }
+
+.footer .heures-ouverture {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.footer .heures-ouverture h4 {
+    color: var(--main-color);
+    margin-bottom: 0.5rem;
+}
+
+.footer .heures-ouverture p {
+    font-size: 14px;
+    color: var(--second-color);
+}
+
+.footer .heures-ouverture ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer .heures-ouverture li {
+    font-size: 14px;
+    color: var(--second-color);
+}
+
 
 .footer .socials {
     margin-top: 1.5rem;
